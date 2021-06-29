@@ -19,10 +19,10 @@ app.use(express.json())
 
 app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '/public/notindex.html'))
-    // rollbar.error('the mission is a failure')
+    rollbar.error('the mission is a failure')
     rollbar.critical('the mission is failing critically')
-    // rollbar.warning('WARNING!')
-    // rollbar.warning('Another Warning')
+    rollbar.warning('WARNING!')
+    rollbar.warning('Another Warning')
 })
 
 
