@@ -23,6 +23,7 @@ app.get('/', function(req, res){
     rollbar.critical('the mission is failing critically')
     rollbar.warning('WARNING!')
     rollbar.warning('Another Warning')
+    rollbar.critical('Oh No!')
 })
 
 
