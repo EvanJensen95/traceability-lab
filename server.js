@@ -17,6 +17,9 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
+
+
+
 // app.get('/', function(req, res){
 //     res.sendFile(path.join(__dirname, '/public/notindex.html'))
 //     rollbar.error('the mission is a failure')
@@ -25,9 +28,6 @@ app.get('/', function(req, res){
 //     rollbar.warning('Another Warning')
 //     rollbar.critical('Oh No!')
 // })
-
-
-
 
 
 

@@ -11,11 +11,32 @@
 <body>
     <h1>This is my Lab</h1>
     <h2>My group is awesome!</h2>
-    <section>
-       <form>
-           <input type='text' placeholder='add info'>
-           <button>Add Info Here</button>
-       </form>
-    </section>
+    <!-- <form> -->
+        <input type='text' placeholder='add info' id='infoInput'>
+        <button>Add Info Here</button>
+    <!-- </form> -->
+    <section id='container'></section>
+    <script>
+        function addInfo(){
+
+
+        let inputName = document.querySelector('#infoInput')
+        let container = document.querySelector('#container')
+        let name = inputName.nodeValue
+        let body = {
+            name
+        }
+            axios
+            .post('/names', body)
+            .then( res => {
+                container.innerHTML = ''
+            })
+            .catch()
+
+        }
+
+    let btn = document.querySelector('#btn')
+    btn.addEventListener('click', addInfo())
+    </script>
 </body>
 </html>
