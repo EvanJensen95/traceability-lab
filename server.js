@@ -17,6 +17,14 @@ app.get('/', function(req, res){
     res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
+app.get('/', function(req, res){
+    res.sendFile(path.join(__dirname, '/public/notindex.html'))
+    rollbar.error('the mission is a failure')
+
+})
+
+
+
 
 const port = process.env.PORT || 5040;
 app.listen(port, function(){ console.log(`Server is rocking out on ${port}`)})
