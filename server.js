@@ -12,19 +12,19 @@ app.use(express.json())
 
 
 
-// app.get('/', function(req, res){
-//     rollbar.log('hello world')
-//     res.sendFile(path.join(__dirname, '/public/index.html'))
-// })
-
 app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname, '/public/notindex.html'))
-    rollbar.error('the mission is a failure')
-    rollbar.critical('the mission is failing critically')
-    rollbar.warning('WARNING!')
-    rollbar.warning('Another Warning')
-    rollbar.critical('Oh No!')
+    rollbar.log('hello world')
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 })
+
+// app.get('/', function(req, res){
+//     res.sendFile(path.join(__dirname, '/public/notindex.html'))
+//     rollbar.error('the mission is a failure')
+//     rollbar.critical('the mission is failing critically')
+//     rollbar.warning('WARNING!')
+//     rollbar.warning('Another Warning')
+//     rollbar.critical('Oh No!')
+// })
 
 
 
