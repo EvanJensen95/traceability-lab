@@ -29,7 +29,7 @@
             axios
             .post('/names', body)
             .then( res => {
-                container.innerHTML = ''
+                container.append(res.data)
             })
             .catch()
 

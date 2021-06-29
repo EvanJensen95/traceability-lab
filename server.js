@@ -16,7 +16,10 @@ app.get('/', function(req, res){
     rollbar.log('hello world')
     res.sendFile(path.join(__dirname, '/public/index.html'))
 })
-
+let nameArr = []
+app.post('/name', function(req, res){
+nameArr.push(res.body.name)
+})
 
 
 
