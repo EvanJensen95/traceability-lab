@@ -18,7 +18,8 @@ app.get('/', function(req, res){
 })
 let nameArr = []
 app.post('/name', function(req, res){
-nameArr.push(res.body.name)
+// nameArr.push(res.body.name)
+return res.body
 })
 
 
